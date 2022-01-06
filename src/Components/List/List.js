@@ -31,22 +31,29 @@ const List = () => {
           setState({
             beers: Array.from(result),
           });
-        },
-        (error) => {
-          // setContext({
-          //   country: context.country,
-          // });
         }
       )
   }, [context.page, context.selected, context.search]);
 
+  if (state.beers.length === 0) {
     return (
       <section className="list">
-        {state.beers.map((beer, index) => (
-          <Item key={index} id={beer.id} img={beer.image_url} name={beer.name} tagline={beer.tagline} abv={beer.abv} hops={beer.ingredients.hops} malt={beer.ingredients.malt}/>
-        ))}
+        <div className="not-found">
+          <span className="not-found-text">Unfortunately, we did not find any results ...</span>
+        </div>
+      </section>
+    )
+  } else {
+    return (
+      <section className="list">
+        <div className="all-item-list">
+          {state.beers.map((beer, index) => (
+            <Item key={index} id={beer.id} img={beer.image_url} name={beer.name} tagline={beer.tagline} abv={beer.abv} hops={beer.ingredients.hops} malt={beer.ingredients.malt}/>
+          ))}
+        </div>
       </section>
     )
   }
+}
 
 export default List;

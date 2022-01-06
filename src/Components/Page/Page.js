@@ -4,7 +4,7 @@ import './Page.css';
 import Header from '../Header/Header';
 import Content from '../Content/Content';
 import Return from '../Return/Return';
-
+import Footer from '../Footer/Footer';
 import { useParams } from 'react-router-dom';
 // ------------------
 
@@ -29,7 +29,6 @@ const Page = () => {
         )
     }, [id]);
 
-    console.log(state.beer);
     return(
         <div>
         <Header />
@@ -37,6 +36,7 @@ const Page = () => {
         {state.beer.map((beer, index) => (
           <Content key={index} id={beer.id} img={beer.image_url} name={beer.name} tagline={beer.tagline} description={beer.description} first_brewed={beer.first_brewed} volume={beer.volume} abv={beer.abv} hops={beer.ingredients.hops} malt={beer.ingredients.malt}/>
         ))}
+        <Footer />
         </div>
     )
 }

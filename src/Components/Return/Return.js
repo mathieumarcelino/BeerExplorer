@@ -1,10 +1,8 @@
 // ----- IMPORT -----
 import React from 'react';
 import './Return.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-
 import { Link } from 'react-router-dom';
 // ------------------
 

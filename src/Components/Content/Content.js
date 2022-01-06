@@ -1,15 +1,11 @@
 // ----- IMPORT -----
 import React from 'react';
 import './Content.css';
-
 import notFound from '../../Assets/Icons/not-found.png';
 // ------------------
 
 
 const Content = ({img, name, tagline, description, first_brewed, volume, abv, hops, malt}) => {
-
-    console.log(img);
-
 
     function arrayToString(arr){
         let str = '';
@@ -27,7 +23,6 @@ const Content = ({img, name, tagline, description, first_brewed, volume, abv, ho
     }
 
     function validImage(e){
-        console.log(e);
         if (e !== "" && e !== null) {
             return e
         } else {

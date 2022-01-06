@@ -1,10 +1,10 @@
 // ----- IMPORT -----
 import React, { useContext } from 'react';
 import './Search.css';
-
 import beer from '../../Assets/Icons/beer.png';
-
 import { AppContext } from "../../Context/AppContext";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 // ------------------
 
 const Search = () => {
@@ -35,7 +35,12 @@ const Search = () => {
                         <span className="small-text-search">Find a beer and discover all its characteristics</span>
                     </div>
                     <div className="sub-box-search">
-                        <input type="text" placeholder="search" className="input-search" onChange={handleChange}></input>
+                        <div class="box-search">
+                            <input type="text" class="searchTerm" placeholder="Which beer are you looking for?" onChange={handleChange}></input>
+                            <button class="searchButton">
+                                <FontAwesomeIcon icon={faSearch} size="sm" />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

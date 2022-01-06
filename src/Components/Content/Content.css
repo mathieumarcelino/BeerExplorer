@@ -3,6 +3,7 @@
     align-items: center;
     padding: 0 10%;
     height: 640px;
+    min-height: calc(100vh - 204px);
 }
 
 .cont-img-content{
@@ -83,6 +84,7 @@
 
     .content{
         padding: 0 6%;
+        min-height: calc(100vh - 174px);
     }
 
     .subtitle-content{
@@ -122,6 +124,7 @@
         flex-direction: column;
         padding: 0 2%;
         height: auto;
+        min-height: calc(100vh - 164px);
     }
 
     .cont-img-content{

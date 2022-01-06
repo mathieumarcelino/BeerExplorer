@@ -1,10 +1,8 @@
 // ----- IMPORT -----
 import React, { useContext } from 'react';
 import './Nav.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
-
 import { AppContext } from "../../Context/AppContext";
 // ------------------
 

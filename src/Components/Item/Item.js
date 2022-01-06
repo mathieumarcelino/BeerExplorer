@@ -1,9 +1,7 @@
 // ----- IMPORT -----
 import React from 'react';
 import './Item.css';
-
 import { Link } from 'react-router-dom';
-
 import notFound from '../../Assets/Icons/not-found.png';
 // ------------------
 
@@ -25,7 +23,6 @@ const Item = ({id, img, name, tagline, abv, hops, malt}) => {
     }
 
     function validImage(e){
-        console.log(e);
         if (e !== "" && e !== null) {
             return e
         } else {
