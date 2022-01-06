@@ -63,6 +63,10 @@
     .cont-button-nav > svg{
         font-size: 1em;
     }
+
+    .selected{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -81,5 +85,9 @@
 
     .cont-text-nav {
         width: 12px;
+    }
+
+    .selected{
+        font-size: 20px;
     }
 }
