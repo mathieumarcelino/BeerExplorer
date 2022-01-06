@@ -1,19 +1,18 @@
 import './App.css';
-import Header from './Components/Header/Header';
-import List from './Components/List/List';
-import Search from './Components/Search/Search';
-import Nav from './Components/Nav/Nav';
-import {AppProvider} from "./Context/AppContext"
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Components/Home/Home';
+import Page from './Components/Page/Page';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <AppProvider>
-      <Header/>
-      <Search/>
-      <List/>
-      <Nav/>
-    </AppProvider>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />}>
+        </Route>
+        <Route path="/page/:id" element={<Page />}>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

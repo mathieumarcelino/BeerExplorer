@@ -3,6 +3,7 @@
     align-items: center;
     padding: 0 10%;
     height: 82px;
+    background: #2f3542;
 }
 
 .container-title{
@@ -15,7 +16,7 @@
     text-transform: uppercase;
     margin: 0;
     font-weight: 600;
-    color: #2f3542;
+    color: #ffffff;
     user-select: none;
 }
 

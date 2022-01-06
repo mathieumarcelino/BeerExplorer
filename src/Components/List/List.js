@@ -2,7 +2,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import './List.css';
 import Item from '../Item/Item';
-import loadingImg from '../../Assets/Icons/loading.gif';
 import { AppContext } from "../../Context/AppContext";
 // ------------------
 
@@ -18,9 +17,7 @@ const List = () => {
   useEffect(() => {
 
     let url = `https://api.punkapi.com/v2/beers?beer_name=${context.search}&per_page=6`;
-    if(context.selected !== undefined){
-      url = `https://api.punkapi.com/v2/beers/${context.selected}`;
-    } else if (context.search !== ''){
+    if (context.search !== ''){
       let name = context.search.replace(" ", "_");
       url = `https://api.punkapi.com/v2/beers?beer_name=${name}&page=${context.page}&per_page=6`;
     } else {
@@ -43,11 +40,6 @@ const List = () => {
       )
   }, [context.page, context.selected, context.search]);
 
-  if (context.loading === true) {
-    return <div className="loading"><img className="loading-img" src={loadingImg} alt="loading"></img></div>
-  } else {
-    console.log(state);
-    console.log(context);
     return (
       <section className="list">
         {state.beers.map((beer, index) => (
@@ -55,8 +47,6 @@ const List = () => {
         ))}
       </section>
     )
-  }
-
   }
 
 export default List;

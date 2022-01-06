@@ -22,7 +22,7 @@ const Nav = () => {
     }
 
     function displaySelected(num, current){
-        if(current > 7 && num === 7 || current === num){
+        if((current > 7 && num === 7) || current === num){
             return "text-nav selected";
         } else {
             return "text-nav";

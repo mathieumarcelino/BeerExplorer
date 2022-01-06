@@ -2,8 +2,6 @@
 import React, { useContext } from 'react';
 import './Search.css';
 
-import { Parallax } from 'react-parallax';
-
 import beer from '../../Assets/Icons/beer.png';
 
 import { AppContext } from "../../Context/AppContext";
@@ -25,8 +23,7 @@ const Search = () => {
     return(
         <section className="search">
             <div className="sub-search">
-                <Parallax className="img-search" bgImage={beer} bgImageAlt="the dog" strength={-200}>
-                </Parallax>
+                <img className="img-search" src={beer} alt="beer ilustration"></img>
             </div>
             <div className="sub-search">
                 <div className="box-text-search">

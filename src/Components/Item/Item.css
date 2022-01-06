@@ -3,6 +3,7 @@
     height: 200px;
     display: flex;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .item:hover > div > .title-text-item{
@@ -120,6 +121,14 @@
         height: 160px;
         width: 100%;
         box-shadow: 0 -1px 0 #dfe4ea inset;
+    }
+
+    .box-img-item{
+        width: 25%;
+    }
+
+    .box-text-item{
+        width: 75%;
     }
 
     .item:nth-child(odd){
