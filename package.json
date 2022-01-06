@@ -1,7 +1,8 @@
 {
   "name": "beerexplorer",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://mathieumarcelino.fr/beerexplorer",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
