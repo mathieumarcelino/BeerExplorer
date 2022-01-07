@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import './List.css';
 import Item from '../Item/Item';
 import { AppContext } from "../../Context/AppContext";
+import loading from '../../Assets/Icons/loading.gif';
 // ------------------
 
 
@@ -12,6 +13,7 @@ const List = () => {
 
   const [state, setState] = useState({
     beers: [],
+    loading: true,
   })
 
   useEffect(() => {
@@ -30,12 +32,21 @@ const List = () => {
         (result) => {
           setState({
             beers: Array.from(result),
+            loading: false,
           });
         }
       )
   }, [context.page, context.selected, context.search]);
 
-  if (state.beers.length === 0) {
+  if (state.loading === true) {
+    return (
+      <section className="list">
+        <div className="loading">
+          <img className="loading-img" src={loading} alt="loading"></img>
+        </div>
+      </section>
+    )
+  } else if (state.beers.length === 0) {
     return (
       <section className="list">
         <div className="not-found">

@@ -26,6 +26,18 @@
     text-align: center;
 }
 
+.loading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.loading-img{
+    width: 30px;
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .list{
