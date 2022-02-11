@@ -1,21 +1,32 @@
 .page {
-    width: 50%;
-    height: 200px;
+    min-height: 100vh;
+}
+
+.loading{
+    width: 100%;
     display: flex;
-    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    min-height: calc(100vh - 204px);
+}
+
+.loading-img{
+    width: 30px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .item{
-        height: 160px;
+    .loading{
+        min-height: calc(100vh - 174px);
     }
+    
 }
 
 @media screen and (max-width: 768px) {
-    .item{
-        height: 160px;
-        width: 100%;
-        box-shadow: 0 -1px 0 #dfe4ea inset;
+
+    .loading {
+        min-height: calc(100vh - 164px);
     }
+
 }

@@ -85,6 +85,9 @@
     cursor: pointer;
     font-size: 20px;
     cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
 
@@ -123,12 +126,12 @@
     }
 
     .big-text-search{
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
     }
 
     .small-text-search{
-        font-size: 16px;
+        font-size: 14px;
         color: #2f3542;
         text-align: center;
     }

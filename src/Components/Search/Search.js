@@ -35,9 +35,9 @@ const Search = () => {
                         <span className="small-text-search">Find a beer and discover all its characteristics</span>
                     </div>
                     <div className="sub-box-search">
-                        <div class="box-search">
-                            <input type="text" class="searchTerm" placeholder="Which beer are you looking for?" onChange={handleChange}></input>
-                            <button class="searchButton">
+                        <div className="box-search">
+                            <input type="text" className="searchTerm" placeholder="Which beer are you looking for?" onChange={handleChange}></input>
+                            <button className="searchButton">
                                 <FontAwesomeIcon icon={faSearch} size="sm" />
                             </button>
                         </div>
