@@ -16,7 +16,6 @@ const Search = () => {
             page: 1,
             selected: context.selected,
             search: event.target.value,
-            loading: false,
         });
     }
 

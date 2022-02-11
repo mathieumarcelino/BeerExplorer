@@ -10,7 +10,6 @@ export const AppProvider = (props) => {
         page: 1,
         selected: undefined,
         search: '',
-        loading: false,
     });
 
     return(

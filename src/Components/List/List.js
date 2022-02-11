@@ -18,6 +18,10 @@ const List = () => {
 
   useEffect(() => {
 
+    setState({
+      loading: true
+    });
+
     let url = `https://api.punkapi.com/v2/beers?beer_name=${context.search}&per_page=6`;
     if (context.search !== ''){
       let name = context.search.replace(" ", "_");

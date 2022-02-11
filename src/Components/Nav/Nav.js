@@ -36,7 +36,6 @@ const Nav = () => {
             page: val,
             selected: context.selected,
             search: context.search,
-            loading: false,
         });
     };
 

@@ -55,6 +55,7 @@
 }
 
 .description-content{
+    text-align: justify;
     font-size: 16px;
     color: #747d8c;
     margin-bottom: 30px;
