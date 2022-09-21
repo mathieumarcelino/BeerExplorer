@@ -13,7 +13,7 @@ const Footer = () => {
     return(
         <footer className="footer">
             <div className="f1 subfooter">
-                <a className="text-footer" href="https://mathieumarcelino.fr">mathieumarcelino.fr</a>
+                <a className="text-footer" href="https://mathieumarcelino.com">mathieumarcelino.com</a>
             </div>
             <div className="f2 subfooter">
                 <div className="social">

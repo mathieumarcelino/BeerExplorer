@@ -1,21 +1,22 @@
 .content{
     display: flex;
     align-items: center;
+
     padding: 0 10%;
-    height: 640px;
     min-height: calc(100vh - 204px);
 }
 
 .cont-img-content{
     width: 40%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .img-content{
-    height: 540px;
+    max-height: 520px;
+    max-width: 220px;
     z-index: 1;
 }
 
@@ -30,7 +31,7 @@
 
 .cont-text-content{
     width: 60%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +116,8 @@
     }
 
     .img-content{
-        height: 480px;
+        max-height: 480px;
+        max-width: 170px;
     }
 }
 
@@ -164,7 +166,8 @@
     }
 
     .img-content{
-        height: 420px;
+        max-height: 420px;
+        max-width: 150px;
     }
 
 }
