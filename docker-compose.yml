@@ -1,0 +1,15 @@
+version: '3.8'
+
+networks:
+  proxy:
+    external: true
+
+services:
+  beer-app:
+    container_name: beer-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - proxy
