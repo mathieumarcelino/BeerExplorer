@@ -24,7 +24,7 @@ const Content = ({img, name, tagline, description, first_brewed, volume, abv, ho
 
     function validImage(e){
         if (e !== "" && e !== null) {
-            return e
+            return '/images/' + e
         } else {
             return notFound
         }

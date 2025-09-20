@@ -1,7 +1,5 @@
 .content{
     display: flex;
-    align-items: center;
-
     padding: 0 10%;
     min-height: calc(100vh - 204px);
 }
@@ -12,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .img-content{
@@ -30,6 +29,7 @@
 }
 
 .cont-text-content{
+    margin-top: 50px;
     width: 60%;
     height: fit-content;
     display: flex;
@@ -112,7 +112,7 @@
     .bg-img-content{
         width: 200px;
         height: 200px;
-        border-radius: 100px;
+        border-radius: 50%;
     }
 
     .img-content{
@@ -137,6 +137,8 @@
 
     .cont-text-content{
         width: 100%;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
     .subtitle-content{
@@ -160,13 +162,12 @@
     }
 
     .bg-img-content{
-        width: 180px;
-        height: 180px;
-        border-radius: 90px;
+        width: 140px;
+        height: 140px;
     }
 
     .img-content{
-        max-height: 420px;
+        max-height: 280px;
         max-width: 150px;
     }
 

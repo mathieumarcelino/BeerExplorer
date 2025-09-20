@@ -19,7 +19,7 @@ const Page = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `https://api.punkapi.com/v2/beers/${id}`;
+        const url = `https://punkapi.online/v3/beers/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(
@@ -47,9 +47,7 @@ const Page = () => {
             <div className='page'>
             <Header />
             <Return />
-            {state.beer.map((beer, index) => (
-            <Content key={index} id={beer.id} img={beer.image_url} name={beer.name} tagline={beer.tagline} description={beer.description} first_brewed={beer.first_brewed} volume={beer.volume} abv={beer.abv} hops={beer.ingredients.hops} malt={beer.ingredients.malt}/>
-            ))}
+            <Content key={state.beer.id} id={state.beer.id} img={state.beer.image} name={state.beer.name} tagline={state.beer.tagline} description={state.beer.description} first_brewed={state.beer.first_brewed} volume={state.beer.volume} abv={state.beer.abv} hops={state.beer.ingredients.hops} malt={state.beer.ingredients.malt}/>
             <Footer />
             </div>
         )

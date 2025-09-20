@@ -9,7 +9,7 @@ export const AppProvider = (props) => {
     const [data, setData] = useState({
         page: 1,
         selected: undefined,
-        search: '',
+        search: ''
     });
 
     return(

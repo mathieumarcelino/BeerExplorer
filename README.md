@@ -1,7 +1,7 @@
 # BeerExplorer
 
 ## Link
-[mathieumarcelino.com/beerexplorer](https://mathieumarcelino.com/beerexplorer)
+[beer.mathi3u.com](https://beer.mathi3u.com/)
 
 ## Demo
 ![](public/demo.gif)

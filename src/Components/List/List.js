@@ -17,29 +17,40 @@ const List = () => {
   })
 
   useEffect(() => {
-
     setState({
-      loading: true
+      loading: true,
+      error: null,
     });
-
-    let url = `https://api.punkapi.com/v2/beers?beer_name=${context.search}&per_page=6`;
-    if (context.search !== ''){
+  
+    let url = `https://punkapi.online/v3/beers?beer_name=${context.search}&per_page=10`;
+    if (context.search !== '') {
       let name = context.search.replace(" ", "_");
-      url = `https://api.punkapi.com/v2/beers?beer_name=${name}&page=${context.page}&per_page=6`;
+      url = `https://punkapi.online/v3/beers?beer_name=${name}&page=${context.page}&per_page=10`;
     } else {
-      url = `https://api.punkapi.com/v2/beers?page=${context.page}&per_page=6`;
+      url = `https://punkapi.online/v3/beers?page=${context.page}&per_page=10`;
     }
-
+  
     fetch(url)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setState({
-            beers: Array.from(result),
-            loading: false,
-          });
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
         }
-      )
+        return res.json();
+      })
+      .then(result => {
+        setState({
+          beers: Array.from(result),
+          loading: false,
+          error: null,
+        });
+      })
+      .catch(error => {
+        console.error("Erreur lors du fetch :", error);
+        setState({
+          beers: [],
+          loading: false
+        });
+      });
   }, [context.page, context.selected, context.search]);
 
   if (state.loading === true) {
@@ -63,7 +74,7 @@ const List = () => {
       <section className="list">
         <div className="all-item-list">
           {state.beers.map((beer, index) => (
-            <Item key={index} id={beer.id} img={beer.image_url} name={beer.name} tagline={beer.tagline} abv={beer.abv} hops={beer.ingredients.hops} malt={beer.ingredients.malt}/>
+            <Item key={index} id={beer.id} img={beer.image} name={beer.name} tagline={beer.tagline} abv={beer.abv} hops={beer.ingredients.hops} malt={beer.ingredients.malt}/>
           ))}
         </div>
       </section>

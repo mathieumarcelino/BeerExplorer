@@ -1,23 +1,19 @@
 .footer{
+    position: absolute;
     height: 60px;
+    width: 100%;
     background: #2f3542;
-    padding: 0 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "f1 . f2";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .f1 { 
-    grid-area: f1; 
-    justify-content: flex-start;
+    padding-left: 10%;
 }
 
 .f2 { 
-    grid-area: f2; 
-    justify-content: flex-end;
+    padding-right: 10%;
 }
 
 .subfooter{
@@ -26,9 +22,9 @@
 }
 
 .social{
-    width: 140px;
     display: flex;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .socialicon{
@@ -43,15 +39,18 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .footer{
         height: 50px;
-        padding: 0 6%;
+    }
+
+    .f1 { 
+        padding-left: 6%;
+    }
+
+    .f2 { 
+        padding-right: 6%;
     }
 
     .text-footer{
         font-size: 14px;
-    }
-
-    .social{
-        width: 100px;
     }
 
     .socialicon{
@@ -62,15 +61,18 @@
 @media screen and (max-width: 768px) {
     .footer{
         height: 50px;
-        padding: 0 2%;
+    }
+
+    .f1 { 
+        padding-left: 2%;
+    }
+
+    .f2 { 
+        padding-right: 2%;
     }
 
     .text-footer{
         font-size: 14px;
-    }
-
-    .social{
-        width: 80px;
     }
 
     .socialicon{
