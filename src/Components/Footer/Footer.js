@@ -1,9 +1,7 @@
 // ----- IMPORT -----
-import React from 'react';
 import './Footer.css';
 import linkedin from '../../Assets/Icons/linkedin.png' ;
 import github from '../../Assets/Icons/github.png' ;
-import twitter from '../../Assets/Icons/twitter.png' ;
 import instagram from '../../Assets/Icons/instagram.png' ;
 // ------------------
 

@@ -22,12 +22,12 @@ const List = () => {
       error: null,
     });
   
-    let url = `https://punkapi.online/v3/beers?beer_name=${context.search}&per_page=10`;
+    let url = `https://punkapi-alxiw.amvera.io/v3/beers?beer_name=${context.search}&per_page=10`;
     if (context.search !== '') {
       let name = context.search.replace(" ", "_");
-      url = `https://punkapi.online/v3/beers?beer_name=${name}&page=${context.page}&per_page=10`;
+      url = `https://punkapi-alxiw.amvera.io/v3/beers?beer_name=${name}&page=${context.page}&per_page=10`;
     } else {
-      url = `https://punkapi.online/v3/beers?page=${context.page}&per_page=10`;
+      url = `https://punkapi-alxiw.amvera.io/v3/beers?page=${context.page}&per_page=10`;
     }
   
     fetch(url)

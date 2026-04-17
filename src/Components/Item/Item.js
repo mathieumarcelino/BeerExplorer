@@ -24,7 +24,7 @@ const Item = ({id, img, name, tagline, abv, hops, malt}) => {
 
     function validImage(e){
         if (e !== "" && e !== null) {
-            return '/images/' + e
+            return '/img/' + e
         } else {
             return notFound
         }

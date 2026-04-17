@@ -19,7 +19,7 @@ const Page = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `https://punkapi.online/v3/beers/${id}`;
+        const url = `https://punkapi-alxiw.amvera.io/v3/beers/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(
